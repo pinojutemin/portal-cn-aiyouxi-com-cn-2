@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 指南与提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrapper {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 窄正文宽度，清晰层级 */
+        .content {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02), 0 1px 4px rgba(0,0,0,0.03);
+        }
+
+        /* 头部 */
+        .hero {
+            margin-bottom: 2.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1rem;
+            color: #6b6b6b;
+            border-left: 3px solid #d4d4d4;
+            padding-left: 1rem;
+            margin-top: 0.6rem;
+        }
+
+        /* 标题层级 */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 2.4rem;
+            margin-bottom: 0.8rem;
+            color: #1e1e1e;
+            letter-spacing: -0.01em;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+            color: #2b2b2b;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #3b3b3b;
+        }
+
+        /* 引用提示卡片 */
+        .callout {
+            background: #f4f4f4;
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            border-left: 4px solid #8b8b8b;
+            font-size: 0.95rem;
+            color: #2f2f2f;
+        }
+
+        .callout strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* 特色列表（极简） */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 1.8rem 0;
+        }
+
+        .feature-list li {
+            padding: 0.4rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 0.98rem;
+            color: #3b3b3b;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #8a8a8a;
+            font-weight: bold;
+        }
+
+        /* 访问句（内嵌链接） */
+        .visit-line {
+            margin-top: 2.2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e8e8e8;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #1e6d9b;
+            text-decoration: none;
+            border-bottom: 1px solid #cbdbe8;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #124263;
+            border-bottom-color: #124263;
+        }
+
+        /* 场景卡片组 (简洁) */
+        .scene-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin: 1.4rem 0 1.2rem 0;
+        }
+
+        .scene-item {
+            background: #f8f8f8;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: #2f2f2f;
+            border: 1px solid #efefef;
+        }
+
+        .scene-item span {
+            font-weight: 500;
+            color: #1f1f1f;
+            margin-right: 0.3rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            margin: 1.8rem 0 0.5rem 0;
+        }
+
+        .faq-mini dt {
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 0.2rem;
+            color: #1f1f1f;
+        }
+
+        .faq-mini dd {
+            margin-left: 0;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            padding-left: 0.2rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 560px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .content {
+                padding: 1.8rem 1.2rem;
+                border-radius: 16px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .callout {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="content">
+        <!-- hero -->
+        <div class="hero">
+            <h1>爱游戏 · 从简明指南开始</h1>
+            <div class="subtitle">一篇轻松的访问提醒，以及关于平台的小梳理</div>
+        </div>
+
+        <!-- 导语 / 多段正文 -->
+        <p>前阵子和朋友聊起日常消遣，发现大家手机里总有一两个固定的去处——有的看资讯，有的找攻略，有的纯粹想找个干净的地方看看近期有什么新内容。我说的，其实就是 <a href="https://portal-cn-aiyouxi.com.cn">爱游戏</a> 这类地方：功能直接，不绕弯子，适合随时打开翻翻。</p>
+
+        <p>不过也常有朋友问：「从哪里进去比较顺？首页长什么样？有没有什么需要特别注意的？」所以这篇就当一份小指南，把一些常见的问题和访问前的小提醒拢在一起，方便你快速上手。</p>
+
+        <h2>平台定位与特点</h2>
+        <p>简单说，它更像一个聚合型的信息服务窗口，围绕游戏内容做整合。你可以在上面找到热门游戏的动态、版本更新摘要、以及一些社区向的讨论。界面风格偏向实用，没有太多花哨的装饰，信息层级比较清楚。</p>
+
+        <ul class="feature-list">
+            <li>内容覆盖较广，从休闲到重度题材都有涉及</li>
+            <li>更新节奏稳定，日常动态和专题内容交替出现</li>
+            <li>交互流程直接，没有强制注册或扫码跳转</li>
+        </ul>
+
+        <h3>适合什么样的场景</h3>
+        <div class="scene-grid">
+            <div class="scene-item"><span>日常浏览：</span>饭后或通勤时随手翻翻，了解最近有哪些新消息</div>
+            <div class="scene-item"><span>查缺补漏：</span>某个游戏版本更新后，去确认具体的调整细节</div>
+            <div class="scene-item"><span>轻度探索：</span>偶尔发现以前没关注的游戏，看看大家的讨论氛围</div>
+        </div>
+
+        <!-- 引用提示 -->
+        <div class="callout">
+            <strong>💡 访问提醒</strong><br>
+            建议使用主流浏览器（Chrome、Edge、Safari 等）访问，部分旧版浏览器可能出现排版偏移。首次加载时如果遇到资源延迟，稍等几秒即可。平台没有强制要求登录，绝大多数内容可直接阅读。
+        </div>
+
+        <h2>FAQ 摘要 · 快速参考</h2>
+        <dl class="faq-mini">
+            <dt>需要注册账号才能用吗？</dt>
+            <dd>不需要。所有公开内容均直接可见，只有评论或部分互动功能才需要账号，但浏览完全不受影响。</dd>
+            <dt>手机端体验怎么样？</dt>
+            <dd>页面自适应做得不错，竖屏阅读很舒适，横屏下部分列表会更宽裕，整体没有明显短板。</dd>
+            <dt>信息更新频率如何？</dt>
+            <dd>日常状态下每天都有新内容，专题或活动期间更新会更密集，首页信息流比较及时。</dd>
+        </dl>
+
+        <!-- 访问句（自然嵌入链接） -->
+        <div class="visit-line">
+            如果你还没去过，或者想换个更清爽的入口，可以试试直接打开 <a href="https://portal-cn-aiyouxi.com.cn">爱游戏</a> 。没有弹窗轰炸，也没有复杂的引导页，就是一个安静的、属于游戏内容的角落。
+        </div>
+
+        <p style="margin-top: 1.8rem; color: #6f6f6f; font-size: 0.85rem; border-top: 1px solid #efefef; padding-top: 1.2rem;">
+            以上内容基于日常使用体验整理，不构成官方说明，页面情况以实际访问为准。
+        </p>
+    </div>
+</div>
+</body>
+</html>

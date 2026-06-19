@@ -1,2 +1,29 @@
-# portal-cn-aiyouxi-com-cn-2
-爱游戏 - https://portal-cn-aiyouxi.com.cn
+# 爱游戏 - 游戏门户平台
+
+欢迎访问 **爱游戏** 官方网站 [https://portal-cn-aiyouxi.com.cn](https://portal-cn-aiyouxi.com.cn)。爱游戏是一个专注于提供游戏资讯、资源与社区服务的综合性门户平台，致力于为玩家带来便捷、丰富的游戏体验。
+
+## 简介
+
+爱游戏（[https://portal-cn-aiyouxi.com.cn](https://portal-cn-aiyouxi.com.cn)）汇聚了众多热门游戏内容，涵盖游戏下载、攻略指南、新闻动态以及玩家交流等功能。无论您是休闲玩家还是硬核爱好者，爱游戏都能为您提供有价值的信息与服务。
+
+## 特点
+
+- **游戏资源丰富**：爱游戏收录了大量游戏资源，方便用户快速查找与获取。
+- **资讯更新及时**：平台持续跟踪游戏行业动态，发布最新游戏新闻与版本更新信息。
+- **社区互动**：爱游戏支持玩家之间交流心得、分享攻略，营造友好的游戏氛围。
+- **界面简洁**：网站设计清晰，导航直观，便于用户快速定位所需内容。
+
+## 访问方式
+
+您可以通过以下链接直接访问爱游戏：
+
+- 官方网站： [https://portal-cn-aiyouxi.com.cn](https://portal-cn-aiyouxi.com.cn)
+
+建议在主流浏览器（如 Chrome、Edge、Firefox）中打开，以获得最佳浏览体验。
+
+## 注意事项
+
+- 爱游戏仅提供游戏相关资讯与合法资源，请用户遵守游戏版权及平台使用规则。
+- 若您在使用过程中遇到任何问题，可通过网站内的联系方式进行反馈。
+
+感谢您对爱游戏的支持！欢迎常来 [https://portal-cn-aiyouxi.com.cn](https://portal-cn-aiyouxi.com.cn) 探索更多游戏乐趣。
