@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>信息卡片 · 1xbet 功能介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f2f8f7;
+      color: #1a2e2c;
+      line-height: 1.6;
+      padding: 20px 16px 48px;
+    }
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* 主视觉 */
+    .hero {
+      background: linear-gradient(145deg, #1b4d47 0%, #2a7b6f 100%);
+      border-radius: 32px;
+      padding: 48px 28px 40px;
+      margin: 0 0 40px 0;
+      color: #e7f5f0;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(27, 77, 71, 0.25);
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin-top: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* 网格卡片布局 */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 520px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 820px) {
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 24px 20px 22px;
+      box-shadow: 0 4px 12px rgba(0, 40, 36, 0.06);
+      transition: transform 0.1s ease, box-shadow 0.2s ease;
+      border: 1px solid #dcebe7;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(27, 77, 71, 0.12);
+      border-color: #a2ccc2;
+    }
+    .card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #e0f0ec;
+      border-radius: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      color: #1b5a51;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #143532;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #2d4d47;
+      margin-bottom: 6px;
+    }
+    .card .tag {
+      display: inline-block;
+      background: #eaf5f1;
+      color: #1b5a51;
+      font-size: 0.75rem;
+      padding: 2px 12px;
+      border-radius: 30px;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    /* 段落区域：自然链接 */
+    .context-box {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 28px 24px;
+      margin-bottom: 40px;
+      border: 1px solid #dcebe7;
+      box-shadow: 0 4px 12px rgba(0, 40, 36, 0.04);
+    }
+    .context-box h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #143532;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .context-box h2 span {
+      background: #cde3dd;
+      padding: 0 10px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: #0a302b;
+    }
+    .context-box p {
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+    .context-box a {
+      color: #1e7b6b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1.5px solid #b2d5cc;
+      transition: border-color 0.2s, background 0.1s;
+    }
+    .context-box a:hover {
+      border-bottom-color: #1e7b6b;
+      background: #e2f3ef;
+    }
+    .context-box .meta-note {
+      display: block;
+      background: #f4fbf9;
+      padding: 12px 16px;
+      border-radius: 16px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      border-left: 4px solid #3b9b89;
+      color: #1a403a;
+    }
+
+    /* 提示/FAQ 摘要 */
+    .faq-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 36px 0 24px;
+    }
+    .faq-item {
+      flex: 1 1 200px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px 16px;
+      border: 1px solid #dcebe7;
+    }
+    .faq-item strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #0f3d37;
+      margin-bottom: 4px;
+    }
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #2f544d;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding-top: 16px;
+      font-size: 0.8rem;
+      color: #5d7a73;
+      border-top: 1px solid #cde3dd;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 主视觉 -->
+  <div class="hero">
+    <h1>信息卡片 · 1xbet</h1>
+    <p>从日常查询、对照阅读到延伸了解——整理成简洁的功能说明页。</p>
+    <div class="badge">📌 参考卡片 · 2025</div>
+  </div>
+
+  <!-- 用途卡片 / 适合人群 -->
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">📋</div>
+      <h3>日常对照查询</h3>
+      <p>当需要快速了解功能模块、术语或分类时，卡片式的信息结构能减少翻找时间。适合需要频繁查阅条目的人。</p>
+      <span class="tag">查询场景</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">🧭</div>
+      <h3>延伸阅读入口</h3>
+      <p>不替代原站，而是作为补充索引。在阅读中遇到想深入了解的内容，可以通过卡片提示跳转到更完整的说明页。</p>
+      <span class="tag">辅助索引</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">👤</div>
+      <h3>适合人群</h3>
+      <p>初次接触、希望系统了解功能框架的用户；或需要一份轻量级对照单的轻度使用者。</p>
+      <span class="tag">新人 · 轻量</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔍</div>
+      <h3>分类与筛选</h3>
+      <p>按模块、标签或关键词组织内容，便于横向比较。卡片本身不承载深层逻辑，但能快速定位关注点。</p>
+      <span class="tag">结构对照</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">📎</div>
+      <h3>引用与记录</h3>
+      <p>在整理笔记、撰写摘要时，卡片式页面可以作为外部引用来源，保持信息简洁且易于核对。</p>
+      <span class="tag">笔记引用</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚙️</div>
+      <h3>动态更新提示</h3>
+      <p>卡片内容可以根据实际页面变化进行调整，保持与源站信息的基本同步。适合用作轻量级变更记录。</p>
+      <span class="tag">维护参考</span>
+    </div>
+  </div>
+
+  <!-- 自然链接段落 + 内容延伸 -->
+  <div class="context-box">
+    <h2>📖 从日常查询到延伸阅读 <span>说明</span></h2>
+    <p>
+      不少人习惯在阅读或记录时，把常用的页面当作一个“信息锚点”。例如，当你需要核对某个功能的名称或用途，或者想了解不同功能之间的区分，一张结构清晰的卡片页会比长篇描述更方便。<a href="https://cn-cn-1xbet.com">1xbet</a> 作为综合信息站点，其内容覆盖多个模块与分类，卡片页能帮助你在不打开过多标签的情况下快速定位。
+    </p>
+    <p>
+      延伸阅读则更侧重“从已知到未知”。假设你已经了解某个基础概念，想看看有没有相关的分类或扩展条目，这时候卡片式的索引可以给你一个大致范围。当然，具体细节还是以原站完整页面为准，卡片页只是辅助整理的轻工具。
+    </p>
+    <div class="meta-note">
+      💡 提示：卡片内容仅作信息整理，不构成操作指引。所有功能说明均以<a href="https://cn-cn-1xbet.com">1xbet</a>对应页面实际展示为准。建议将本页作为对照清单，而非唯一信息来源。
+    </div>
+  </div>
+
+  <!-- FAQ 摘要风格 -->
+  <div class="faq-mini">
+    <div class="faq-item">
+      <strong>📌 卡片会包含所有内容吗？</strong>
+      <p>不会。卡片只提炼常见分类或用途，完整条目需要参阅原站。适合快速扫读。</p>
+    </div>
+    <div class="faq-item">
+      <strong>📌 信息会不会过时？</strong>
+      <p>卡片页会尽量跟随源站主要结构更新，但具体细节可能略有延迟。建议结合官方页面确认。</p>
+    </div>
+    <div class="faq-item">
+      <strong>📌 可以直接复制卡片内容？</strong>
+      <p>卡片文本以公共知识整理为主，但引用时建议标注来源，保持信息透明度。</p>
+    </div>
+    <div class="faq-item">
+      <strong>📌 为什么用卡片而不是列表？</strong>
+      <p>卡片视觉上更独立，每个单元自带上下文，适合横纵向对比。移动端阅读时也更易滑动浏览。</p>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    本页为信息卡片索引 · 内容基于公开信息整理 · 2025
+  </div>
+
+</div>
+</body>
+</html>
